@@ -100,7 +100,7 @@
 				page = require('webpage').create();
 
 				page.settings.loadImages      = false;
-				page.settings.userAgent       = 'Mozilla/5.0 (compatible; Wappalyzer; +https://github.com/AliasIO/Wappalyzer)';
+				page.settings.userAgent       = 'Mozilla/5.0 (compatible; GreyWizardBot/1)';
 				page.settings.resourceTimeout = resourceTimeout;
 
 				page.onConsoleMessage = function(message) {
@@ -110,9 +110,9 @@
 				page.onError = function(message) {
 					wappalyzer.log(message);
 
-					console.log(JSON.stringify({ applications: [] }));
+					//console.log(JSON.stringify({ applications: [] }));
 
-					phantom.exit(1);
+					//phantom.exit(1);
 				};
 
 				page.onResourceTimeout = function() {
