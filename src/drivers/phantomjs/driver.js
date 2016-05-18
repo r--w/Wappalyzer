@@ -61,6 +61,7 @@
 				if ( count ) {
 					for ( app in wappalyzer.detected[url] ) {
 						cats = [];
+						icon = wappalyzer.apps[app].icon;
 
 						wappalyzer.apps[app].cats.forEach(function(cat) {
 							cats.push(wappalyzer.categories[cat]);
@@ -70,6 +71,7 @@
 							name: app,
 							confidence:  wappalyzer.detected[url][app].confidenceTotal,
 							version:     wappalyzer.detected[url][app].version,
+							icon:	     icon,	
 							categories:  cats
 						});
 					}
