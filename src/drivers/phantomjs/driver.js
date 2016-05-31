@@ -75,9 +75,8 @@
 							categories:  cats
 						});
 					}
-
-					console.log(JSON.stringify({ applications: apps }));
 				}
+                console.log(JSON.stringify({ applications: apps }));
 			},
 
 			/**
