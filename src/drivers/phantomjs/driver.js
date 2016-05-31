@@ -145,11 +145,7 @@
 					var html, environmentVars;
 
 					if ( status === 'success' ) {
-						html = page.content;
-
-						if ( html.length > 50000 ) {
-							html = html.substring(0, 25000) + html.substring(html.length - 25000, html.length);
-						}
+                        html = page.content;
 
 						// Collect environment variables
 						environmentVars = page.evaluate(function() {
