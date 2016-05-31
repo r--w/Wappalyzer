@@ -125,7 +125,7 @@
 				};
 
 				page.onResourceReceived = function(response) {
-					if ( response.url.replace(/\/$/, '') === url.replace(/\/$/, '') ) {
+					if ( response.url.replace(/\/$/, '').toLowerCase() === url.replace(/\/$/, '').toLowerCase() ) {
 						if ( response.redirectURL ) {
 							url = response.redirectURL;
 
