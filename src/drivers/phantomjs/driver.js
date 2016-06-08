@@ -146,7 +146,7 @@
                 
              	page.open(url, function(status) {
 					var html, environmentVars;
-					if ( status === 'success' || page.content) {
+					if ( status === 'success' || page.content) { //page.content solves issue: https://github.com/ariya/phantomjs/issues/12750
                         html = page.content;
 
 						// Collect environment variables
