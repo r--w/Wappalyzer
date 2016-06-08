@@ -139,11 +139,14 @@
 						}
 					}
 				};
-
-				page.open(url, function(status) {
+                
+                page.onResourceError = function(resourceError) {
+                    wappalyzer.log(resourceError.url + ': ' + resourceError.errorString);
+                };
+                
+             	page.open(url, function(status) {
 					var html, environmentVars;
-
-					if ( status === 'success' ) {
+					if ( status === 'success' || page.content) {
                         html = page.content;
 
 						// Collect environment variables
