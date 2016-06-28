@@ -101,7 +101,7 @@
 				page = require('webpage').create();
 
 				page.settings.loadImages      = false;
-				page.settings.userAgent       = 'Mozilla/5.0 (compatibile; GreyWizard-Bot/2; +https://greywizard.com/en)';
+				page.settings.userAgent       = 'Mozilla/5.0 (compatibile; GreyWizard/2; +https://greywizard.com/en)';
 				page.settings.resourceTimeout = resourceTimeout;
 
 				page.onConsoleMessage = function(message) {
